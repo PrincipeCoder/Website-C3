@@ -47,18 +47,14 @@ const Banner = ({ intetactionUserBtn1, intetactionUserBtn2 }) => {
               </Text>
             </div>
             <div className="flex flex-row gap-4">
-              <Link smooth to={"#directiva"}>
-                <PrimaryButton
-                  actionClick={intetactionUserBtn1}
-                  text={"CONÓCENOS"}
-                ></PrimaryButton>
-              </Link>
-              <Link>
-                <SecondaryButton
-                  actionClick={intetactionUserBtn2}
-                  text={"CONTÁCTANOS"}
-                ></SecondaryButton>
-              </Link>
+              <PrimaryButton
+                actionClick={intetactionUserBtn1}
+                text={"CONÓCENOS"}
+              ></PrimaryButton>
+              <SecondaryButton
+                actionClick={intetactionUserBtn2}
+                text={"CONTÁCTANOS"}
+              ></SecondaryButton>
             </div>
           </div>
         </div>

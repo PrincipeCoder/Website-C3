@@ -18,7 +18,6 @@ const StaticNavbar = ({ className = "" }) => {
       <div>
         <ul className="flex flex-row flex-wrap justify-between gap-10">
           <NavLink
-            activeClassName="text-main"
             className={({ isActive }) =>
               `font-bold transition-colors duration-300 ${
                 isActive ? "text-main" : "text-white"

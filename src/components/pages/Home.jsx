@@ -146,9 +146,8 @@ const Home = () => {
             ) : (
               <div>
                 {Sponsor.map((sp) => (
-                  <Link to={sp.Url} target="_blank">
+                  <Link to={sp.Url} target="_blank" key={sp.id}>
                     <img
-                      key={sp.id}
                       src={sp.Imagen}
                       alt={sp.Descripción}
                       className="max-w-20 max-h-20 transition-shadow duration-300 hover:shadow-[0_0_20px_var(--color-main)] rounded-full"

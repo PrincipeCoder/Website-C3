@@ -1,7 +1,7 @@
 const LabelText = ({ id, label, form, className }) => {
   return (
     <label
-      for={id}
+      htmlFor={id}
       form={form}
       className={`font-ps font-normal text-white ${className}`}
     >
