@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "Imagen": "/C3Conf/banner.jpg",
+    "Descripción": "Conferencia anual de Ciberseguridad C3. Únete a los expertos de la industria.",
+    "Titulo": "C3Conf 2026",
+    "Lugar": "Auditorio Principal",
+    "Fecha": "25 Nov 2026",
+    "Url": "/eventos/C3Conf"
+  },
+  {
+    "id": 2,
+    "Imagen": "/logros/placeholder.jpg",
+    "Descripción": "Taller práctico de seguridad en aplicaciones web y buenas prácticas.",
+    "Titulo": "Taller de WebApp Sec",
+    "Lugar": "Laboratorio 1",
+    "Fecha": "10 Dic 2026",
+    "Url": "#"
+  }
+]

@@ -3,18 +3,12 @@ import { useState } from "react";
 import CarouselItem from "../molecules/CarouselItem";
 import Dots from "../molecules/Dots";
 import Text from "../atoms/Text";
-import { useDirectiva } from "../../hooks/useDirectiva";
+import membersData from "../../data/directiva.json";
 
 const Carousel = () => {
-  const { Members, loading } = useDirectiva();
-  const [activeIndex, setActiveIndex] = useState(5);
+  const Members = membersData;
+  const [activeIndex, setActiveIndex] = useState(0); // Set to 0 to avoid out-of-bounds on dummy data
 
-  if (loading)
-    return (
-      <Text type={"green"} className="text-center">
-        Cargando datos...
-      </Text>
-    );
   if (Members.length === 0) return <p>No hay miembros.</p>;
 
   const member = Members[activeIndex];

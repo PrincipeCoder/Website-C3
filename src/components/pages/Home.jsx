@@ -4,7 +4,7 @@ import Banner from "../organisms/Banner";
 import Heading from "../atoms/Heading";
 import Text from "../atoms/Text";
 import AdCard from "../organisms/AdCard";
-import { useAd } from "../../hooks/useAd";
+import adsData from "../../data/ads.json";
 import { Link } from "react-router-dom";
 import sponsorsData from "../../data/sponsors.json";
 
@@ -13,7 +13,7 @@ const Home = () => {
         document.title = "Centro Cultural de Ciberseguridad";
     }, []);
 
-    const { Ads, loadingAd } = useAd();
+    const Ads = adsData;
 
     return (
         <div className="flex flex-col pb-10 w-full overflow-hidden bg-black min-h-screen">
@@ -76,9 +76,7 @@ const Home = () => {
                     <Heading level={2} size={4} className="text-center text-3xl md:text-5xl text-white font-bold">
                         Eventos
                     </Heading>
-                    {loadingAd ? (
-                        <Text className="text-center text-green-500">Cargando datos...</Text>
-                    ) : Ads.length === 0 ? (
+                    {Ads.length === 0 ? (
                         <Text className="text-center text-green-500">No hay eventos disponibles.</Text>
                     ) : (
                         <div className="flex gap-8 justify-center flex-wrap max-w-7xl mx-auto">
