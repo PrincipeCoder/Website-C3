@@ -13,14 +13,14 @@
   ],
   "miembros": [
     {
-      "titulo": "Certificaciones (ISC)³",
-      "descripcion": "Más del 40% de nuestra junta directiva ha obtenido la certificación 'Certified in Cybersecurity' (CC), validando sus conocimientos bajo estándares globales.",
-      "imagen": "https://images.unsplash.com/photo-1523240715181-01489bb2e4c6?q=80&w=800"
+      "titulo": "Primer Puesto en el CTF de Ekoparty: Futuro Hacker Lima 2026",
+      "descripcion": "El pasado sábado 16 de mayo en la Ekoparty-Futuro Hacker, realizado en la Universidad de Lima se desarrolló la competencia Capture The Flag (CTF) diseñada por el  (CERC) de la Carrera de Ingeniería de Sistemas de la Universidad de Lima. Tras resolver retos de criptografía, esteganografía, ingeniería inversa y otras categorías, nuestro vicepresidente logro obtener el primer puesto en la competencia. ",
+      "imagen": "/logros/LM_001.png"
     },
     {
-      "titulo": "Top 10 en CTFs Nacionales",
-      "descripcion": "Nuestros equipos de competición han alcanzado el podio en diversas competencias de 'Capture The Flag' a nivel nacional, destacando en criptografía y análisis forense.",
-      "imagen": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800"
+      "titulo": "CCC x LUPIC",
+      "descripcion": "El pasado agosto del 2025, 3 miembros de la Junta Directiva (Piero Aliaga, Jose Menendez y Brenda Mendoza) participaron del programa de capacitación en ciberseguridad en Corea del Sur gracias al convenio LUPIC con la Facultad de Ingenieria Electrica y Electronica de la Universidad Nacional de Ingenieria (FIEE-UNI).",
+      "imagen": "/logros/LM_002.png"
     }
   ]
 }
