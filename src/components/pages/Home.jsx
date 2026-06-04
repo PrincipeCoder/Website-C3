@@ -3,17 +3,13 @@ import FadeInSection from "../animations/FadeInSection";
 import Banner from "../organisms/Banner";
 import Heading from "../atoms/Heading";
 import Text from "../atoms/Text";
-import AdCard from "../organisms/AdCard";
-import adsData from "../../data/ads.json";
 import { Link } from "react-router-dom";
-import sponsorsData from "../../data/sponsors.json";
+import sponsorsData from "../../data/sponsors.js";
 
 const Home = () => {
     useEffect(() => {
         document.title = "Centro Cultural de Ciberseguridad";
     }, []);
-
-    const Ads = adsData;
 
     return (
         <div className="flex flex-col pb-10 w-full overflow-hidden bg-black min-h-screen">
@@ -72,19 +68,49 @@ const Home = () => {
             </FadeInSection>
 
             <FadeInSection>
-                <section className="w-full flex flex-col items-center gap-10 px-4 md:px-20 py-16" id="eventos">
-                    <Heading level={2} size={4} className="text-center text-3xl md:text-5xl text-white font-bold">
-                        Eventos
-                    </Heading>
-                    {Ads.length === 0 ? (
-                        <Text className="text-center text-green-500">No hay eventos disponibles.</Text>
-                    ) : (
-                        <div className="flex gap-8 justify-center flex-wrap max-w-7xl mx-auto">
-                            {Ads.map((ad) => (
-                                <AdCard key={ad.id} pathImage={ad.Imagen} descriptionImage={ad.Descripción} title={ad.Titulo} place={ad.Lugar} date={ad.Fecha} url={ad.Url} />
-                            ))}
+                <section className="w-full flex flex-col items-center px-4 md:px-20 py-24 relative overflow-hidden" id="eventos">
+                    {/* Background glow effects */}
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-5xl opacity-20 pointer-events-none">
+                        <div className="absolute top-0 left-0 w-64 h-64 bg-green-500 rounded-full mix-blend-screen filter blur-[100px] animate-pulse"></div>
+                        <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-screen filter blur-[100px] animate-pulse" style={{animationDelay: '2s'}}></div>
+                    </div>
+
+                    <div className="text-center mb-16 relative z-10">
+                        <Heading level={2} size={4} className="text-4xl md:text-5xl lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500 font-black mb-6">
+                            ¿Están preparados para la cúspide de la ciberseguridad?
+                        </Heading>
+                        <Text className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+                            Únete a nuestros eventos principales. El conocimiento te espera, el desafío también. Demuestra tus habilidades al más alto nivel.
+                        </Text>
+                    </div>
+
+                    <div className="flex flex-col md:flex-row gap-8 w-full max-w-5xl relative z-10">
+                        {/* Tarjeta C3Conf */}
+                        <div className="flex-1 bg-[#111] border border-gray-800 hover:border-green-500/50 rounded-3xl p-8 md:p-10 flex flex-col items-center text-center transition-all duration-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.15)] group relative overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-b from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="w-20 h-20 bg-black border border-green-500/30 rounded-2xl flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(34,197,94,0.2)] group-hover:scale-110 transition-transform duration-500">
+                                <span className="text-2xl font-black text-white">C3<span className="text-green-500">C</span></span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white mb-4">C3Conf</h3>
+                            <p className="text-gray-400 mb-8 flex-1">La conferencia anual donde convergen expertos e investigadores. Charlas, talleres y networking para elevar tu nivel técnico.</p>
+                            <Link to="/eventos/C3Conf" className="w-full py-4 bg-white/5 hover:bg-green-500 text-white hover:text-black font-bold rounded-xl transition-all duration-300">
+                                Descubrir más
+                            </Link>
                         </div>
-                    )}
+
+                        {/* Tarjeta CCCTF */}
+                        <div className="flex-1 bg-[#111] border border-gray-800 hover:border-blue-500/50 rounded-3xl p-8 md:p-10 flex flex-col items-center text-center transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] group relative overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="w-20 h-20 bg-black border border-blue-500/30 rounded-2xl flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(59,130,246,0.2)] group-hover:scale-110 transition-transform duration-500">
+                                <span className="text-2xl font-black text-white">CC<span className="text-blue-500">CTF</span></span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-white mb-4">CCCTF</h3>
+                            <p className="text-gray-400 mb-8 flex-1">Capture The Flag. Pon a prueba tus habilidades ofensivas y defensivas en un entorno simulado. ¿Tienes lo necesario para ganar?</p>
+                            <Link to="#" className="w-full py-4 bg-white/5 hover:bg-blue-500 text-white hover:text-black font-bold rounded-xl transition-all duration-300">
+                                Próximamente
+                            </Link>
+                        </div>
+                    </div>
                 </section>
             </FadeInSection>
 

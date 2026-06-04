@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import FadeInSection from "../animations/FadeInSection";
 import { IconMapPin, IconCalendarEvent, IconMicrophone2, IconTicket, IconTerminal2, IconChevronRight, IconMessageCode, IconShield, IconCloudLock, IconSearch, IconStarFilled, IconCode, IconLock } from "@tabler/icons-react";
-import sponsorsData from "../../data/sponsors.json";
+import sponsorsData from "../../data/sponsors.js";
 import c3confData from "../../data/c3conf.json";
 import logoC3Conf from "../../assets/images/LogoC3Conf-Photoroom.webp";
 
