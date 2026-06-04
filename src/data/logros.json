@@ -1,0 +1,26 @@
+{
+  "institucionales": [
+    {
+      "titulo": "Oficialización a nivel UNI",
+      "descripcion": "Después de tanta espera, desde la creación de la carrera en 2022, hoy podemos decir con orgullo que el Centro Cultural de Ciberseguridad es oficialmente una realidad. Se concreta un paso importante que marca el inicio de una nueva etapa para toda la comunidad.",
+      "imagen": "/logros/NL_001.png"
+    },
+    {
+      "titulo": "C3Conf 2026 x UNI 150 años",
+      "descripcion": "El 1er gran paso: C3Conf confirma alianza con la UNI por sus 150 años\n\nEl Centro Cultural de Ciberseguridad marca un hito importante: nuestro evento insignia, C3Conf, formará parte de las celebraciones oficiales por los 150 años de la Universidad Nacional de Ingeniería.",
+      "imagen": "/logros/NL_002.png"
+    }
+  ],
+  "miembros": [
+    {
+      "titulo": "Certificaciones (ISC)³",
+      "descripcion": "Más del 40% de nuestra junta directiva ha obtenido la certificación 'Certified in Cybersecurity' (CC), validando sus conocimientos bajo estándares globales.",
+      "imagen": "https://images.unsplash.com/photo-1523240715181-01489bb2e4c6?q=80&w=800"
+    },
+    {
+      "titulo": "Top 10 en CTFs Nacionales",
+      "descripcion": "Nuestros equipos de competición han alcanzado el podio en diversas competencias de 'Capture The Flag' a nivel nacional, destacando en criptografía y análisis forense.",
+      "imagen": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=800"
+    }
+  ]
+}

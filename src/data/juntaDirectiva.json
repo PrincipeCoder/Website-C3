@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "nombre": "Anghelo Principe",
+    "cargo": "Presidente",
+    "area": "Presidencia",
+    "foto": "/directiva/JD2026_Presidente.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 2,
+    "nombre": "Flavio Garcia",
+    "cargo": "Vicepresidente",
+    "area": "Presidencia",
+    "foto": "/directiva/JD2026_Vicepresidente.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 3,
+    "nombre": "Fabrizio Valencia",
+    "cargo": "Secretario General",
+    "area": "Secretaría General",
+    "foto": "/directiva/JD2026_Secretario.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 4,
+    "nombre": "Fernando Racchumi",
+    "cargo": "Director de Asuntos Académicos",
+    "area": "Asuntos Académicos",
+    "foto": "/directiva/JD2026_DirectorAA.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 5,
+    "nombre": "Isaac Becerra",
+    "cargo": "Subdirector de Asuntos Académicos",
+    "area": "Asuntos Académicos",
+    "foto": "/directiva/JD2026_SubdirectorAA.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 6,
+    "nombre": "Luis Villegas",
+    "cargo": "Director de Proyectos e Investigación",
+    "area": "Proyectos e Investigación",
+    "foto": "/directiva/JD2026_DirectorPI.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 7,
+    "nombre": "Martin Benites",
+    "cargo": "Subdirector de Proyectos e Investigación",
+    "area": "Proyectos e Investigación",
+    "foto": "/directiva/JD2026_SubdirectorPI.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 8,
+    "nombre": "Franco Espinoza",
+    "cargo": "Director de Relaciones Públicas",
+    "area": "Relaciones Públicas",
+    "foto": "/directiva/JD2026_DirectorRP.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 9,
+    "nombre": "Martin Puicon",
+    "cargo": "Subdirector de Relaciones Públicas",
+    "area": "Relaciones Públicas",
+    "foto": "/directiva/JD2026_SubdirectorRP.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 10,
+    "nombre": "Adriana Medrano",
+    "cargo": "Directora de Marketing",
+    "area": "Marketing",
+    "foto": "/directiva/JD2026_DirectorM.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 11,
+    "nombre": "Joseph Padilla",
+    "cargo": "Subdirector de Marketing",
+    "area": "Marketing",
+    "foto": "/directiva/JD2026_SubdirectorM.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 12,
+    "nombre": "Pablo Vasquez",
+    "cargo": "Director de Economía y Finanzas",
+    "area": "Economía y Finanzas",
+    "foto": "/directiva/JD2026_DirectorEF.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 13,
+    "nombre": "Matias Adauto",
+    "cargo": "Subdirector de Economía y Finanzas",
+    "area": "Economía y Finanzas",
+    "foto": "/directiva/JD2026_SubdirectorEF.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 14,
+    "nombre": "Sebastian Torres",
+    "cargo": "Miembro de Apoyo de Investigación",
+    "area": "Miembros de Apoyo",
+    "foto": "/directiva/JD2026_Apoyo1.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 15,
+    "nombre": "Manzur Rosado",
+    "cargo": "Miembro de Apoyo de Investigación",
+    "area": "Miembros de Apoyo",
+    "foto": "/directiva/JD2026_Apoyo2.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 16,
+    "nombre": "Apoyo Tres",
+    "cargo": "Miembro de Apoyo de Investigación",
+    "area": "Miembros de Apoyo",
+    "foto": "/directiva/JD2026_Apoyo.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 17,
+    "nombre": "Yasert De La Cruz",
+    "cargo": "Miembro de Apoyo de Marketing",
+    "area": "Miembros de Apoyo",
+    "foto": "/directiva/JD2026_Apoyo.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 18,
+    "nombre": "Apoyo Cinco",
+    "cargo": "Miembro de Apoyo",
+    "area": "Miembros de Apoyo",
+    "foto": "/directiva/JD2026_Apoyo.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 19,
+    "nombre": "Apoyo Cinco",
+    "cargo": "Miembro de Apoyo",
+    "area": "Miembros de Apoyo",
+    "foto": "/directiva/JD2026_Apoyo.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  },
+  {
+    "id": 20,
+    "nombre": "Apoyo Cinco",
+    "cargo": "Miembro de Apoyo",
+    "area": "Miembros de Apoyo",
+    "foto": "/directiva/JD2026_Apoyo.png",
+    "linkedin": "https://linkedin.com",
+    "github": "https://github.com"
+  }
+]

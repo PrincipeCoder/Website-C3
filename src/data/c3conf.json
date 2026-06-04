@@ -1,0 +1,135 @@
+{
+  "hero": {
+    "version": "v2026.1",
+    "year": "2026",
+    "subtitle": "La intersección definitiva entre innovación, seguridad digital y cultura tecnológica.",
+    "date": "28 NOVIEMBRE 2026",
+    "location": "INICTEL-UNI",
+    "ctaPrimary": "OBTENER ACCESO",
+    "ctaSecondary": "CALL FOR PAPERS"
+  },
+  "stats": [
+    {
+      "value": "1",
+      "label": "DÍA DE EVENTO"
+    },
+    {
+      "value": "6",
+      "label": "PONENTES"
+    },
+    {
+      "value": "400",
+      "label": "ASISTENTES"
+    },
+    {
+      "value": "1",
+      "label": "ZONA CTF"
+    }
+  ],
+  "about": {
+    "title": "EL EPICENTRO DE LA CIBERSEGURIDAD",
+    "description": "C3Conf es el evento insignia del Centro Cultural de Ciberseguridad. Un ecosistema donde estudiantes, profesionales e investigadores convergen para compartir inteligencia táctica, metodologías de vanguardia y descubrimientos en un entorno académico y ético de alto rigor técnico."
+  },
+  "tracks": [
+    {
+      "id": "red-team",
+      "title": "Offensive Security",
+      "description": "Explotación avanzada, evasión de defensas, emulación de adversarios (Red Teaming) y metodologías de intrusión táctica."
+    },
+    {
+      "id": "blue-team",
+      "title": "Defensive Security",
+      "description": "Respuesta a incidentes, Threat Hunting, arquitectura de seguridad corporativa y mitigación proactiva (Blue Teaming)."
+    },
+    {
+      "id": "cloud-sec",
+      "title": "Cloud & AI Security",
+      "description": "Ataque y defensa en entornos multicloud, seguridad en pipelines CI/CD y vulnerabilidades en modelos de Machine Learning."
+    },
+    {
+      "id": "osint",
+      "title": "OSINT & Intel",
+      "description": "Inteligencia de fuentes abiertas, análisis de amenazas (CTI), operaciones encubiertas y metodologías de investigación."
+    }
+  ],
+  "timeline": [
+    {
+      "day": "DÍA 01",
+      "date": "15 OCT",
+      "title": "FUNDAMENTALS & WORKSHOPS",
+      "description": "Talleres técnicos intensivos, preparación de entornos y bienvenida. Noche de networking y opening keynote."
+    },
+    {
+      "day": "DÍA 02",
+      "date": "16 OCT",
+      "title": "CORE BRIEFINGS & CTF START",
+      "description": "Charlas principales (Briefings), paneles de discusión y el inicio de la competencia CTF presencial (Capture The Flag)."
+    },
+    {
+      "day": "DÍA 03",
+      "date": "17 OCT",
+      "title": "ADVANCED EXPLOITATION & CLOSING",
+      "description": "Demos de Live Hacking, premiación del CTF, revelación de vulnerabilidades Zero-Day y ceremonia de clausura."
+    }
+  ],
+  "speakers": [
+    {
+      "id": 1,
+      "name": "Alex Vargas",
+      "role": "Red Team Lead",
+      "company": "CyberCorp",
+      "specialty": "Malware Dev",
+      "level": "Avanzado",
+      "social": "@alexv_sec",
+      "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "Elena Torres",
+      "role": "Security Researcher",
+      "company": "InfoSec Labs",
+      "specialty": "Cloud Security",
+      "level": "Intermedio",
+      "social": "@elenat_cloud",
+      "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "David Kim",
+      "role": "Cryptography Expert",
+      "company": "FinTech Security",
+      "specialty": "Web3 Sec",
+      "level": "Avanzado",
+      "social": "@dk_crypto",
+      "image": "https://images.unsplash.com/photo-1510511459019-5efa7aece747?q=80&w=600&auto=format&fit=crop"
+    },
+    {
+      "id": 4,
+      "name": "Sofía Ruiz",
+      "role": "Reverse Engineer",
+      "company": "Threat Intel",
+      "specialty": "IoT Hacking",
+      "level": "Experto",
+      "social": "@sofia_re",
+      "image": "https://images.unsplash.com/photo-1523240715181-01489bb2e4c6?q=80&w=600&auto=format&fit=crop"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "user": "Jorge Vigil",
+      "role": "Major Account Manager - Fortinet",
+      "avatar": "/C3Conf/T_JVigil.png",
+      "rating": 5,
+      "text": "El día de hoy participamos junto a Tomas Asmat en la C3Conf de la UNI, donde destacamos la evolución de los sistemas de interconexión de datos y cómo las arquitecturas SASE impulsan una ciberseguridad más sólida y adaptable. Nuestro agradecimiento al comité organizador de la C3Conf por la invitación y la excelente coordinación del evento."
+    },
+    {
+      "id": 2,
+      "user": "Omar Palomino",
+      "role": "Offensive Security Consultant & Co-Founder - Kunak Consulting",
+      "avatar": "/C3Conf/T_OPalomino.png",
+      "rating": 5,
+      "text": "Gracias C3Conf Perú 2025 – UNI El sábado tuve el honor de presentar mi charla “Red Route: Silent RedTeam Techniques for Full AD Takeover” en la FIEE – UNI, y quiero aprovechar este espacio para agradecer: A la organización, por la invitación y por montar un evento de primer nivel. A todas las personas que se acercaron a saludar, conversar y compartir tan buenas vibras. Gracias totales como siempre"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ekogroups Lima",
+    "enlace": "https://ejemplo.com",
+    "imagen": "src/assets/images/LIMA.webp"
+  },
+  {
+    "id": 2,
+    "nombre": "Spartan Security",
+    "enlace": "https://spartancybersecurity.com/es#",
+    "imagen": "src/assets/images/Spartan.png"
+  }
+]
