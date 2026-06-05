@@ -247,26 +247,8 @@ const C3Conf = () => {
                             <h2 className="text-3xl font-bold text-white tracking-wide">CRONOGRAMA DE OPERACIONES</h2>
                         </div>
 
-                        <div className="relative border-l border-white/10 ml-4 md:ml-0 md:pl-0">
-                            {timeline.map((item, idx) => (
-                                <div key={idx} className="mb-12 relative pl-8 md:pl-0 md:flex md:items-center gap-8 group">
-                                    <div className="hidden md:block w-1/3 text-right">
-                                        <span className="text-sm font-mono text-gray-500 tracking-widest">{item.date}</span>
-                                        <h3 className="text-xl font-bold text-[#8bc34a]">{item.day}</h3>
-                                    </div>
-
-                                    {/* Timeline dot */}
-                                    <div className="absolute left-[-5px] md:left-[33.33%] md:-translate-x-1/2 w-2.5 h-2.5 bg-white/20 rounded-full group-hover:bg-[#8bc34a] group-hover:shadow-[0_0_10px_rgba(139,195,74,0.8)] transition-all"></div>
-
-                                    <div className="md:w-2/3 md:pl-8">
-                                        <div className="md:hidden mb-2">
-                                            <span className="text-xs font-mono text-[#8bc34a] tracking-widest">{item.day} - {item.date}</span>
-                                        </div>
-                                        <h4 className="text-xl font-semibold text-white mb-2">{item.title}</h4>
-                                        <p className="text-gray-500">{item.description}</p>
-                                    </div>
-                                </div>
-                            ))}
+                        <div className="flex justify-center py-10">
+                            <span className="text-[#8bc34a] font-mono text-xl animate-pulse">buscando ...</span>
                         </div>
                     </div>
                 </div>
@@ -283,36 +265,10 @@ const C3Conf = () => {
                                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Intel & Speakers</h2>
                                 <p className="text-gray-400 font-light max-w-lg">Expertos de clase mundial compartiendo investigaciones inéditas, zero-days y metodologías tácticas.</p>
                             </div>
-                            <button className="text-sm font-mono text-white hover:text-[#8bc34a] transition-colors flex items-center gap-2">
-                                VER AGENDA COMPLETA <IconChevronRight size={16} />
-                            </button>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                            {speakers.map((speaker) => (
-                                <div key={speaker.id} className="group relative rounded-2xl overflow-hidden bg-[#050505] border border-white/5 aspect-[3/4]">
-                                    <img
-                                        src={speaker.image}
-                                        alt={speaker.name}
-                                        className="absolute inset-0 w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-out"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#020202] via-[#020202]/50 to-transparent opacity-90 group-hover:opacity-80 transition-opacity"></div>
-
-                                    <div className="absolute top-4 left-4 flex gap-2">
-                                        <span className="px-2 py-1 bg-black/50 backdrop-blur border border-white/10 text-[10px] font-mono text-white rounded">{speaker.level}</span>
-                                    </div>
-
-                                    <div className="absolute bottom-0 left-0 w-full p-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                        <h3 className="text-2xl font-bold text-white mb-1">{speaker.name}</h3>
-                                        <p className="text-[#8bc34a] text-sm font-medium mb-3">{speaker.role}</p>
-
-                                        <div className="flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                                            <span className="text-gray-400 text-xs">{speaker.company}</span>
-                                            <span className="text-white text-xs font-mono">{speaker.social}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
+                        <div className="flex justify-center py-20">
+                            <span className="text-[#8bc34a] font-mono text-xl animate-pulse">buscando ...</span>
                         </div>
                     </div>
                 </div>
@@ -389,34 +345,34 @@ const C3Conf = () => {
 
             <div className="h-24 w-full"></div>
 
-            {/* 8. CTA FINAL */}
+            {/* 8. CONTACTO / CTA FINAL */}
             <FadeInSection>
                 <div className="w-full max-w-4xl px-6 py-20 mx-auto relative z-10 mb-20">
                     <div className="bg-gradient-to-br from-[#0a0a0a] to-[#020202] border border-white/10 p-12 md:p-20 rounded-3xl text-center relative overflow-hidden shadow-2xl">
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,195,74,0.1)_0%,transparent_70%)] pointer-events-none"></div>
 
-                        <IconTicket size={48} className="text-white/20 mx-auto mb-6" />
+                        <IconMessageCode size={48} className="text-white/20 mx-auto mb-6" />
 
                         <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                            Asegura tu acceso a C3Conf
+                            Contacto
                         </h2>
+                        
+                        <div className="flex justify-center mb-6">
+                            <span className="text-[#8bc34a] font-mono text-xl animate-pulse">buscando ...</span>
+                        </div>
+
                         <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto font-light">
-                            Los cupos son estrictamente limitados para mantener la calidad técnica de los talleres y el CTF. Únete a la élite de ciberseguridad.
+                            ¿Quieres comunicarte con nosotros para la C3Conf? Envíanos la flag oculta y establece una conexión segura.
                         </p>
 
-                        <form className="flex flex-col sm:flex-row gap-3 justify-center max-w-xl mx-auto">
-                            <input
-                                type="email"
-                                placeholder="tu@email.com"
-                                className="px-6 py-4 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-[#8bc34a]/50 focus:bg-white/10 w-full placeholder:text-gray-600 transition-all"
-                            />
-                            <button
-                                type="button"
-                                className="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-[#8bc34a] hover:text-black transition-all whitespace-nowrap shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(139,195,74,0.3)]"
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-xl mx-auto">
+                            <a
+                                href="mailto:ccc.c3conf@uni.edu.pe?subject=Flag%20C3Conf&body=CCC%7B1W4NTBE1NC3CONF%7D"
+                                className="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-[#8bc34a] hover:text-black transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(139,195,74,0.3)]"
                             >
-                                SOLICITAR ACCESO
-                            </button>
-                        </form>
+                                <IconLock size={18} /> ENVIAR TRANSMISIÓN SECRETA
+                            </a>
+                        </div>
 
                         <p className="mt-6 text-xs text-gray-600 font-mono">
                             CONNECTION SECURE // ENCRYPTED_CHANNEL_ACTIVE
