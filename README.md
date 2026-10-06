@@ -97,6 +97,68 @@ public/
 
 ---
 
+## 🌍 Despliegue en Producción (Linux Ubuntu + Nginx)
+
+Para desplegar la aplicación en un entorno de producción con un servidor Linux Ubuntu, la mejor práctica es usar **Nginx** para servir los archivos estáticos generados por Vite.
+
+1. **Actualizar el sistema e instalar Nginx y Node.js**
+   Asegúrate de tener Node.js instalado en el servidor. Luego instala Nginx:
+   ```bash
+   sudo apt update
+   sudo apt install nginx -y
+   ```
+
+2. **Clonar el proyecto e instalar dependencias**
+   ```bash
+   git clone https://github.com/usuario/centro-cultural-ciberseguridad.git
+   cd centro-cultural-ciberseguridad
+   npm install
+   ```
+
+3. **Construir la versión de producción**
+   Esto compilará y optimizará el código, generando una carpeta `dist/`.
+   ```bash
+   npm run build
+   ```
+
+4. **Copiar los archivos al directorio de Nginx**
+   Mueve el contenido generado al directorio predeterminado que Nginx usa para servir webs (puedes crear una subcarpeta si gestionas varios sitios):
+   ```bash
+   sudo cp -r dist/* /var/www/html/
+   ```
+
+5. **Configurar Nginx para React Router (SPA)**
+   Dado que este sitio usa `react-router-dom` (aplicación SPA), Nginx necesita redirigir el tráfico de cualquier URL hacia el archivo raíz `index.html`. De lo contrario, al refrescar la página en cualquier ruta (como `/eventos/C3Conf`) te dará un error 404.
+   
+   Edita el archivo de configuración:
+   ```bash
+   sudo nano /etc/nginx/sites-available/default
+   ```
+   Busca el bloque `location /` y modifícalo para incluir `try_files`:
+   ```nginx
+   server {
+       listen 80 default_server;
+       listen [::]:80 default_server;
+       root /var/www/html;
+       index index.html index.htm;
+       server_name _;
+
+       location / {
+           try_files $uri $uri/ /index.html;
+       }
+   }
+   ```
+
+6. **Reiniciar Nginx**
+   Comprueba que la configuración sea válida y reinicia el servicio.
+   ```bash
+   sudo nginx -t
+   sudo systemctl restart nginx
+   ```
+   ¡Listo! Tu sitio web ya estará accesible desde la IP pública o dominio apuntado hacia tu servidor Ubuntu.
+
+---
+
 ## 🎨 Características principales
 
 - Diseño moderno, minimalista y totalmente **responsivo**.
