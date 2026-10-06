@@ -29,21 +29,30 @@ const Banner = ({ intetactionUserBtn1, intetactionUserBtn2 }) => {
             ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            ctx.fillStyle = "#0f0";
-            ctx.font = `${fontSize}px monospace`;
+            ctx.font = `bold ${fontSize}px monospace`;
 
             for (let i = 0; i < drops.length; i++) {
                 const text = letters[Math.floor(Math.random() * letters.length)];
+                
+                if (Math.random() > 0.95) {
+                    ctx.fillStyle = "#ffffff";
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = "#8bc34a";
+                } else {
+                    ctx.fillStyle = "#8bc34a";
+                    ctx.shadowBlur = 0;
+                }
+
                 ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.99) {
                     drops[i] = 0;
                 }
                 drops[i]++;
             }
         };
 
-        const interval = setInterval(draw, 33);
+        const interval = setInterval(draw, 60);
 
         return () => {
             clearInterval(interval);
@@ -63,7 +72,14 @@ const Banner = ({ intetactionUserBtn1, intetactionUserBtn2 }) => {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black z-0 pointer-events-none"></div>
 
             {/* Content Container */}
-            <div className="relative z-10 w-full max-w-7xl px-6 md:px-20 flex flex-col gap-6 md:gap-8 mt-20 md:mt-0">
+            <div className="relative z-10 w-full max-w-[1600px] px-6 md:px-20 flex flex-col gap-6 md:gap-8 mt-20 md:mt-0">
+                <div className="flex justify-center md:justify-start mb-6 md:mb-10 w-full relative z-20">
+                    <img 
+                        src="/CCC/Logo-Principal-CCC.png" 
+                        alt="C3 Logo" 
+                        className="w-48 md:w-80 lg:w-[400px] object-contain drop-shadow-[0_0_30px_rgba(139,195,74,0.4)] hover:drop-shadow-[0_0_50px_rgba(139,195,74,0.8)] hover:scale-105 transition-all duration-500"
+                    />
+                </div>
                 <Text
                     type="gradient"
                     size="2xl"
@@ -71,7 +87,7 @@ const Banner = ({ intetactionUserBtn1, intetactionUserBtn2 }) => {
                 >
                     <span className="text-[#8bc34a] font-bold">&gt;_</span>
                     <span className="text-gray-300">LA INTERSECCIÓN ENTRE INNOVACIÓN Y SEGURIDAD</span>
-                    <span className="animate-pulse bg-[#8bc34a] w-3 h-6 inline-block"></span>
+                    <span className="bg-[#8bc34a] w-3 h-6 inline-block"></span>
                 </Text>
 
                 <Heading

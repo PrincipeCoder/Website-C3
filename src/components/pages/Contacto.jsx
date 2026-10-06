@@ -89,7 +89,7 @@ const Contacto = () => {
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none z-0"></div>
 
             <FadeInSection>
-                <div className="max-w-7xl mx-auto w-full relative z-10">
+                <div className="max-w-[1600px] mx-auto w-full relative z-10">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 mb-16">
                         <div className="flex-1">
                             <Heading level={1} size={5} className="text-center md:text-left text-3xl md:text-5xl text-white mb-4">

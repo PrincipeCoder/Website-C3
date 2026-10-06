@@ -38,7 +38,7 @@ const Nosotros = () => {
                         </Heading>
                     </div>
                     
-                    <div className="w-full max-w-4xl m-auto bg-[#0a0a0a] border border-[#8bc34a]/30 p-6 md:p-10 rounded-xl shadow-[0_0_30px_rgba(139,195,74,0.1)] relative overflow-hidden group hover:border-[#8bc34a]/60 transition-all duration-500">
+                    <div className="w-full max-w-6xl m-auto bg-[#0a0a0a] border border-[#8bc34a]/30 p-6 md:p-10 rounded-xl shadow-[0_0_30px_rgba(139,195,74,0.1)] relative overflow-hidden group hover:border-[#8bc34a]/60 transition-all duration-500">
                         {/* Decorative Top Bar */}
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#8bc34a] to-transparent opacity-50"></div>
                         
@@ -60,7 +60,7 @@ const Nosotros = () => {
             {/* SECCIÓN 2: NUESTRO OBJETIVO */}
             <FadeInSection>
                 <section className="w-full flex justify-center px-4 md:px-20 py-16 relative z-10">
-                    <div className="w-full max-w-5xl bg-[#0d0d0d] border border-cyan-500/20 rounded-2xl p-8 md:p-10 shadow-[0_0_40px_rgba(34,211,238,0.05)] flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden group hover:border-cyan-500/50 transition-all duration-500">
+                    <div className="w-full max-w-7xl bg-[#0d0d0d] border border-cyan-500/20 rounded-2xl p-8 md:p-10 shadow-[0_0_40px_rgba(34,211,238,0.05)] flex flex-col md:flex-row items-center gap-8 md:gap-12 relative overflow-hidden group hover:border-cyan-500/50 transition-all duration-500">
                         {/* Grid Background Effect */}
                         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.02)_1px,transparent_1px)] bg-[size:2rem_2rem] pointer-events-none"></div>
 
@@ -83,7 +83,7 @@ const Nosotros = () => {
             {/* SECCIÓN 3: NUESTROS LOGROS (C3) */}
             <FadeInSection>
                 <div className="px-4 md:px-20 py-16 bg-[#050505] relative z-10 border-t border-b border-gray-900">
-                    <div className="max-w-7xl mx-auto">
+                    <div className="max-w-[1600px] mx-auto">
                         <div className="flex flex-col md:flex-row items-center gap-4 mb-12 justify-center">
                             <IconAward className="text-[#8bc34a]" size={40} />
                             <Heading level={2} size={4} className="text-white text-3xl md:text-4xl font-bold uppercase tracking-widest text-center">
@@ -137,7 +137,7 @@ const Nosotros = () => {
             {/* SECCIÓN 4: LOGROS DE MIEMBROS */}
             <FadeInSection>
                 <div className="px-4 md:px-20 py-16 bg-black relative z-10">
-                    <div className="max-w-7xl mx-auto">
+                    <div className="max-w-[1600px] mx-auto">
                         <div className="flex flex-col md:flex-row items-center gap-4 mb-12 justify-center">
                             <IconAward className="text-cyan-500" size={40} />
                             <Heading level={2} size={4} className="text-white text-3xl md:text-4xl font-bold uppercase tracking-widest text-center">

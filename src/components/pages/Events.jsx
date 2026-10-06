@@ -122,7 +122,7 @@ const Events = () => {
 
             {/* SECCIÓN: C3Conf */}
             <FadeInSection>
-                <div className="flex flex-col lg:flex-row gap-12 items-center w-full max-w-7xl relative z-10">
+                <div className="flex flex-col lg:flex-row gap-12 items-center w-full max-w-[1600px] relative z-10">
                     {/* Carrusel (Mitad izquierda) */}
                     <div className="w-full lg:w-1/2 p-2 border border-[#8bc34a]/20 rounded-2xl bg-[#0a0a0a]">
                         <EventCarousel images={confImages} accentColor="#8bc34a" />
@@ -160,7 +160,7 @@ const Events = () => {
 
             {/* SECCIÓN: CCCTF */}
             <FadeInSection>
-                <div className="flex flex-col lg:flex-row-reverse gap-12 items-center w-full max-w-7xl mb-16 relative z-10">
+                <div className="flex flex-col lg:flex-row-reverse gap-12 items-center w-full max-w-[1600px] mb-16 relative z-10">
                     {/* Carrusel (Mitad derecha) */}
                     <div className="w-full lg:w-1/2 p-2 border border-blue-500/20 rounded-2xl bg-[#0a0a0a]">
                         <EventCarousel images={ctfImages} accentColor="#3b82f6" />

@@ -34,7 +34,7 @@ const Home = () => {
 
             <FadeInSection>
                 <section id="nosotros" className="w-full flex justify-center px-4 md:px-20 py-16 mt-10 relative z-10">
-                    <div className="w-full max-w-5xl bg-[#111] border border-gray-800 rounded-3xl p-8 md:p-12 shadow-[0_0_30px_rgba(34,197,94,0.05)] flex flex-col items-center gap-8 relative overflow-hidden">
+                    <div className="w-full max-w-7xl bg-[#111] border border-gray-800 rounded-3xl p-8 md:p-12 shadow-[0_0_30px_rgba(34,197,94,0.05)] flex flex-col items-center gap-8 relative overflow-hidden">
                         {/* Subtle grid background for card */}
                         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f1a_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f1a_1px,transparent_1px)] bg-[size:2rem_2rem] pointer-events-none"></div>
 
@@ -55,7 +55,7 @@ const Home = () => {
 
             <FadeInSection>
                 <section className="w-full flex justify-center items-center px-4 md:px-20 py-12">
-                    <div className="w-full max-w-5xl aspect-video rounded-3xl overflow-hidden shadow-[0_0_25px_rgba(34,197,94,0.15)] border border-green-500/30">
+                    <div className="w-full max-w-7xl aspect-video rounded-3xl overflow-hidden shadow-[0_0_25px_rgba(34,197,94,0.15)] border border-green-500/30">
                         <iframe
                             className="w-full h-full"
                             src="https://www.youtube.com/embed/HfnHyfnUvLw"
@@ -70,7 +70,7 @@ const Home = () => {
             <FadeInSection>
                 <section className="w-full flex flex-col items-center px-4 md:px-20 py-24 relative overflow-hidden" id="eventos">
                     {/* Background glow effects */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-5xl opacity-20 pointer-events-none">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-7xl opacity-20 pointer-events-none">
                         <div className="absolute top-0 left-0 w-64 h-64 bg-green-500 rounded-full mix-blend-screen filter blur-[100px] animate-pulse"></div>
                         <div className="absolute bottom-0 right-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-screen filter blur-[100px] animate-pulse" style={{animationDelay: '2s'}}></div>
                     </div>
@@ -84,7 +84,7 @@ const Home = () => {
                         </Text>
                     </div>
 
-                    <div className="flex flex-col md:flex-row gap-8 w-full max-w-5xl relative z-10">
+                    <div className="flex flex-col md:flex-row gap-8 w-full max-w-7xl relative z-10">
                         {/* Tarjeta C3Conf */}
                         <div className="flex-1 bg-[#111] border border-gray-800 hover:border-green-500/50 rounded-3xl p-8 md:p-10 flex flex-col items-center text-center transition-all duration-500 hover:shadow-[0_0_30px_rgba(34,197,94,0.15)] group relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-b from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -119,7 +119,7 @@ const Home = () => {
                     <Heading level={2} size={4} className="text-center text-3xl md:text-5xl text-white font-bold">
                         Nuestros Sponsors
                     </Heading>
-                    <div className="w-full max-w-5xl bg-[#111] border border-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                    <div className="w-full max-w-7xl bg-[#111] border border-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(34,197,94,0.05)_0%,transparent_70%)] pointer-events-none"></div>
 
                         {sponsorsData.length === 0 ? (

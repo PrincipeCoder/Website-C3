@@ -63,11 +63,11 @@ const C3Conf = () => {
                     </div>
 
                     {/* Líneas de escaneo y targeting */}
-                    <div className="absolute left-[20%] top-0 w-[1px] h-full bg-gradient-to-b from-transparent via-[#8bc34a]/20 to-transparent"></div>
-                    <div className="absolute right-[20%] top-0 w-[1px] h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent"></div>
+                    <div className="absolute left-[5%] md:left-[10%] top-0 w-[1px] h-full bg-gradient-to-b from-transparent via-[#8bc34a]/20 to-transparent"></div>
+                    <div className="absolute right-[5%] md:right-[10%] top-0 w-[1px] h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent"></div>
 
                     {/* Retícula central (Targeting HUD) */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-4xl h-[60%] border border-white/5 rounded-[40px] opacity-30">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-[1600px] h-[70%] border border-white/5 rounded-[40px] opacity-30">
                         <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-[#8bc34a]/50"></div>
                         <div className="absolute -top-1 -right-1 w-6 h-6 border-t-2 border-r-2 border-blue-500/50"></div>
                         <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-2 border-l-2 border-white/20"></div>
@@ -75,11 +75,11 @@ const C3Conf = () => {
                     </div>
                 </div>
 
-                <div className="max-w-6xl w-full flex flex-col items-center text-center relative z-10 pt-10">
+                <div className="w-full px-4 md:px-12 flex flex-col items-center text-center relative z-10 pt-10">
 
                     {/* Header Brand Mark (Logo) */}
-                    <div className="mb-16">
-                        <img src={logoC3Conf} alt="C3Conf Logo" className="h-16 md:h-20 lg:h-24 object-contain drop-shadow-[0_0_15px_rgba(139,195,74,0.2)] opacity-90" />
+                    <div className="mb-10">
+                        <img src={logoC3Conf} alt="C3Conf Logo" className="h-32 md:h-48 lg:h-64 object-contain drop-shadow-[0_0_25px_rgba(139,195,74,0.3)] opacity-100" />
                     </div>
 
                     {/* Status Badge */}
@@ -89,7 +89,7 @@ const C3Conf = () => {
                     </div>
 
                     {/* Main Title & Subtitle Wrapper with Flanking Cyber Items */}
-                    <div className="relative flex items-center justify-center w-full max-w-4xl mb-20">
+                    <div className="relative flex items-center justify-center w-full max-w-[1600px] mb-20 px-2 md:px-10">
 
                         {/* Flanking Item Left */}
                         <div className="hidden md:flex flex-col gap-3 absolute left-0 top-1/2 -translate-y-1/2 text-left opacity-60 border-l border-[#8bc34a]/20 pl-4">
@@ -158,7 +158,7 @@ const C3Conf = () => {
 
             {/* 2. STATS (Dashboard Bento Box) */}
             <div className="w-full relative z-10 px-6 -mt-16">
-                <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
                     {stats.map((stat, idx) => (
                         <div key={idx} className="bg-[#0a0a0a] border border-white/5 p-8 rounded-xl backdrop-blur-md shadow-2xl flex flex-col items-center text-center group hover:border-[#8bc34a]/30 transition-colors">
                             <h3 className="text-4xl font-bold text-white mb-2 group-hover:text-[#8bc34a] transition-colors">{stat.value}</h3>
@@ -173,7 +173,7 @@ const C3Conf = () => {
             {/* 3. ABOUT & TRACKS */}
             <FadeInSection>
                 <div className="w-full relative z-10 px-6">
-                    <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-20">
+                    <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-20">
                         {/* Mascot Terminal / SYS.INFO */}
                         <div className="lg:w-1/3 flex flex-col justify-center">
                             <div className="text-[#8bc34a] font-mono text-xs tracking-widest mb-4 flex items-center gap-2">
@@ -239,10 +239,49 @@ const C3Conf = () => {
 
             <div className="h-40 w-full"></div>
 
+            {/* SEDE OFICIAL */}
+            <FadeInSection>
+                <div className="w-full relative z-10 px-6">
+                    <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 bg-gradient-to-br from-[#0a0a0a] to-[#020202] border border-white/10 p-10 md:p-14 rounded-3xl shadow-2xl relative overflow-hidden">
+                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(59,130,246,0.05)_0%,transparent_70%)] pointer-events-none"></div>
+                        
+                        <div className="md:w-1/2 relative z-10">
+                            <div className="text-blue-500 font-mono text-xs tracking-widest mb-4 flex items-center gap-2">
+                                <IconMapPin size={16} /> LOCATION_DATA
+                            </div>
+                            <h2 className="text-4xl font-bold text-white mb-6">
+                                Sede <span className="text-blue-500">Oficial</span>
+                            </h2>
+                            <p className="text-gray-400 leading-relaxed mb-8">
+                                El C3Conf 2026 se llevará a cabo en las instalaciones de INICTEL-UNI, el principal referente de investigación y capacitación en telecomunicaciones.
+                            </p>
+                            <div className="bg-black/50 border border-white/5 rounded-xl p-6 font-mono text-sm inline-block">
+                                <div className="flex items-center gap-3 mb-2">
+                                    <IconMapPin className="text-[#8bc34a]" size={18} />
+                                    <span className="text-white font-bold">INICTEL UNI</span>
+                                </div>
+                                <div className="text-gray-500 ml-7">
+                                    Av. San Luis 1771 <br />
+                                    San Borja 15021, Lima, Perú
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="md:w-1/2 flex justify-center relative z-10">
+                            <div className="relative group p-4 md:p-6 bg-white rounded-2xl shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] transition-all duration-500 w-full max-w-xl flex justify-center items-center">
+                                <img src="/C3Conf/INICTEL-UNI.png" alt="Sede INICTEL UNI" className="w-full h-auto object-cover rounded-xl" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </FadeInSection>
+
+            <div className="h-40 w-full"></div>
+
             {/* 4. TIMELINE */}
             <FadeInSection>
                 <div className="w-full relative z-10 px-6 py-20 bg-[#050505] border-y border-white/5">
-                    <div className="max-w-4xl mx-auto">
+                    <div className="max-w-6xl mx-auto">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl font-bold text-white tracking-wide">CRONOGRAMA DE OPERACIONES</h2>
                         </div>
@@ -259,7 +298,7 @@ const C3Conf = () => {
             {/* 5. SPEAKERS */}
             <FadeInSection>
                 <div className="w-full relative z-10 px-6">
-                    <div className="max-w-7xl mx-auto">
+                    <div className="max-w-[1600px] mx-auto">
                         <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
                             <div>
                                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Intel & Speakers</h2>
@@ -279,7 +318,7 @@ const C3Conf = () => {
             {/* 6. TESTIMONIOS */}
             <FadeInSection>
                 <div className="w-full relative z-10 px-6">
-                    <div className="max-w-5xl mx-auto">
+                    <div className="max-w-7xl mx-auto">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl font-bold text-white">RESEÑAS DEL SISTEMA</h2>
                         </div>
@@ -329,15 +368,15 @@ const C3Conf = () => {
             {/* 7. SPONSORS */}
             <FadeInSection>
                 <div className="w-full bg-[#050505] py-20 px-6 border-y border-white/5 relative z-10">
-                    <div className="max-w-6xl mx-auto text-center">
-                        <p className="text-gray-500 text-sm font-mono tracking-widest mb-10">NUESTROS ALIADOS TECNOLÓGICOS</p>
+                    <div className="max-w-[1400px] mx-auto text-center">
+                        <p className="text-[#8bc34a] text-sm font-mono tracking-widest mb-10 flex items-center justify-center gap-2">
+                            <span className="text-gray-500">&gt;</span> EL C3CONF 2026 LLEGA GRACIAS A NUESTROS SPONSORS OFICIALES
+                        </p>
 
-                        <div className="flex flex-wrap justify-center gap-12 md:gap-20 items-center opacity-60 hover:opacity-100 transition-opacity duration-500">
-                            {sponsorsData.map((sp) => (
-                                <a href={sp.enlace} key={sp.id} target="_blank" rel="noreferrer" className="relative group">
-                                    <img src={sp.imagen} alt={sp.nombre} className="max-w-[120px] max-h-12 object-contain grayscale group-hover:grayscale-0 group-hover:brightness-200 transition-all duration-300" />
-                                </a>
-                            ))}
+                        <div className="flex flex-wrap justify-center gap-16 md:gap-28 lg:gap-32 items-center opacity-70 hover:opacity-100 transition-opacity duration-500 mt-8">
+                            <img src="/C3Conf/Sponsor-SecureSoft.png" alt="SecureSoft" className="h-16 md:h-24 lg:h-32 object-contain grayscale hover:grayscale-0 transition-all duration-300" onError={(e) => e.target.style.display = 'none'} />
+                            <img src="/C3Conf/Sponsor-Fortinet.png" alt="Fortinet" className="h-12 md:h-20 lg:h-28 object-contain grayscale hover:grayscale-0 transition-all duration-300" onError={(e) => e.target.style.display = 'none'} />
+                            <img src="/C3Conf/Sponsor-Radware.png" alt="Radware" className="h-12 md:h-20 lg:h-28 object-contain grayscale hover:grayscale-0 transition-all duration-300" onError={(e) => e.target.style.display = 'none'} />
                         </div>
                     </div>
                 </div>
@@ -347,7 +386,7 @@ const C3Conf = () => {
 
             {/* 8. CONTACTO / CTA FINAL */}
             <FadeInSection>
-                <div className="w-full max-w-4xl px-6 py-20 mx-auto relative z-10 mb-20">
+                <div className="w-full max-w-6xl px-6 py-20 mx-auto relative z-10 mb-20">
                     <div className="bg-gradient-to-br from-[#0a0a0a] to-[#020202] border border-white/10 p-12 md:p-20 rounded-3xl text-center relative overflow-hidden shadow-2xl">
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,195,74,0.1)_0%,transparent_70%)] pointer-events-none"></div>
 

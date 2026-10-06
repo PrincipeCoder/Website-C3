@@ -86,7 +86,7 @@ const Directors = () => {
 
                                     {/* Renderizado condicional: Carrusel para Apoyo, Grid para el resto */}
                                     {area === "Miembros de Apoyo" ? (
-                                        <div className="relative w-full max-w-6xl mx-auto flex items-center group/carousel">
+                                        <div className="relative w-full max-w-[1400px] mx-auto flex items-center group/carousel">
                                             {/* Botón Izquierda */}
                                             <button 
                                                 onClick={() => scrollApoyo('left')}

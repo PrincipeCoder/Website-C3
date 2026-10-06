@@ -14,6 +14,8 @@ import Events from "./components/pages/Events.jsx";
 import Nosotros from "./components/pages/Nosotros";
 import Contacto from "./components/pages/Contacto";
 import C3Conf from "./components/pages/C3Conf";
+import C3TF from "./components/pages/C3TF";
+
 
 const router = createBrowserRouter([
     {
@@ -31,7 +33,7 @@ const router = createBrowserRouter([
             { path: "logros", element: <Achievements /> },
             { path: "blog", element: <Blog /> },
             { path: "eventos/C3Conf", element: <C3Conf /> },
-            { path: "recursos/CCCTF", element: <div className="text-white p-20 text-center">Página del CTF en construcción...</div> }
+            { path: "recursos/C3TF", element: <C3TF /> }
         ],
         errorElement: <NotFound />,
     },
