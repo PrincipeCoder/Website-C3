@@ -15,7 +15,7 @@ const AppLayout = () => {
             <Favicon url={IconPage} />
 
             {/* HEADER / BANNER */}
-            <header className="flex flex-col md:flex-row justify-between items-center p-4 md:p-6 bg-transparent absolute top-0 w-full z-10 gap-4 md:gap-0">
+            <header className="flex flex-col md:flex-row justify-between items-center p-4 md:p-6 bg-transparent absolute top-0 w-full z-50 gap-4 md:gap-0 pointer-events-auto">
                 {/* Logo C3 */}
                 <div className="logo-container">
                     {/* Tu logo aquí */}

@@ -61,7 +61,7 @@ const Banner = ({ intetactionUserBtn1, intetactionUserBtn2 }) => {
     }, []);
 
     return (
-        <div className="relative w-full h-screen overflow-hidden flex items-center justify-center bg-black">
+        <div className="relative w-full min-h-screen overflow-hidden flex items-center justify-center bg-black pt-28 pb-16 md:pt-36 md:pb-24">
             {/* Matrix Background */}
             <canvas ref={canvasRef} className="absolute inset-0 z-0 opacity-[0.15]"></canvas>
 
@@ -72,8 +72,8 @@ const Banner = ({ intetactionUserBtn1, intetactionUserBtn2 }) => {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black z-0 pointer-events-none"></div>
 
             {/* Content Container */}
-            <div className="relative z-10 w-full max-w-[1600px] px-6 md:px-20 flex flex-col gap-6 md:gap-8 mt-20 md:mt-0">
-                <div className="flex justify-center md:justify-start mb-6 md:mb-10 w-full relative z-20">
+            <div className="relative z-10 w-full max-w-[1600px] px-6 md:px-20 flex flex-col gap-6 md:gap-8">
+                <div className="flex justify-center md:justify-start mb-6 md:mb-10 w-full">
                     <img 
                         src="/CCC/Logo-Principal-CCC.png" 
                         alt="C3 Logo" 
