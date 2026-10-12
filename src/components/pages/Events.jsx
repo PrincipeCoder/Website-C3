@@ -158,7 +158,7 @@ const Events = () => {
                 </div>
             </FadeInSection>
 
-            {/* SECCIÓN: CCCTF */}
+            {/* SECCIÓN: C3TF */}
             <FadeInSection>
                 <div className="flex flex-col lg:flex-row-reverse gap-12 items-center w-full max-w-[1600px] mb-16 relative z-10">
                     {/* Carrusel (Mitad derecha) */}
@@ -172,7 +172,7 @@ const Events = () => {
                             <span className="w-2 h-2 rounded-full bg-blue-500"></span> COMPETITION
                         </div>
                         <h2 className="text-4xl font-bold text-white tracking-wide">
-                            <span className="text-blue-500">&gt;</span> C3 Capture The Flag <span className="text-blue-500">(CCCTF)</span>
+                            <span className="text-blue-500">&gt;</span> C3 Capture The Flag <span className="text-blue-500">(C3TF)</span>
                         </h2>
                         
                         <div className="bg-[#111]/80 border-r-2 md:border-l-2 md:border-r-0 border-blue-500 p-4 text-gray-300 text-right md:text-left">
@@ -186,7 +186,7 @@ const Events = () => {
                         {/* Botón */}
                         <div className="mt-4 flex justify-end md:justify-start">
                             <Link
-                                to="/recursos/CCCTF"
+                                to="/eventos/C3TF"
                                 className="inline-flex items-center justify-center px-8 py-3 text-base font-bold transition-all duration-300 bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-black rounded-sm shadow-[0_0_15px_rgba(59,130,246,0.2)] hover:shadow-[0_0_25px_rgba(59,130,246,0.6)] hover:-translate-y-1"
                             >
                                 [ MÁS INFORMACIÓN DEL CTF ]

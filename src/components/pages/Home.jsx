@@ -98,16 +98,16 @@ const Home = () => {
                             </Link>
                         </div>
 
-                        {/* Tarjeta CCCTF */}
+                        {/* Tarjeta C3TF */}
                         <div className="flex-1 bg-[#111] border border-gray-800 hover:border-blue-500/50 rounded-3xl p-8 md:p-10 flex flex-col items-center text-center transition-all duration-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] group relative overflow-hidden">
                             <div className="absolute inset-0 bg-gradient-to-b from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             <div className="w-20 h-20 bg-black border border-blue-500/30 rounded-2xl flex items-center justify-center mb-6 shadow-[0_0_15px_rgba(59,130,246,0.2)] group-hover:scale-110 transition-transform duration-500">
-                                <span className="text-2xl font-black text-white">CC<span className="text-blue-500">CTF</span></span>
+                                <span className="text-2xl font-black text-white">C3<span className="text-blue-500">TF</span></span>
                             </div>
-                            <h3 className="text-2xl font-bold text-white mb-4">CCCTF</h3>
+                            <h3 className="text-2xl font-bold text-white mb-4">C3TF</h3>
                             <p className="text-gray-400 mb-8 flex-1">Capture The Flag. Pon a prueba tus habilidades ofensivas y defensivas en un entorno simulado. ¿Tienes lo necesario para ganar?</p>
-                            <Link to="#" className="w-full py-4 bg-white/5 hover:bg-blue-500 text-white hover:text-black font-bold rounded-xl transition-all duration-300">
-                                Próximamente
+                            <Link to="/eventos/C3TF" className="w-full py-4 bg-white/5 hover:bg-blue-500 text-white hover:text-black font-bold rounded-xl transition-all duration-300">
+                                Descubrir más
                             </Link>
                         </div>
                     </div>

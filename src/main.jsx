@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             { path: "logros", element: <Achievements /> },
             { path: "blog", element: <Blog /> },
             { path: "eventos/C3Conf", element: <C3Conf /> },
-            { path: "recursos/C3TF", element: <C3TF /> }
+            { path: "eventos/C3TF", element: <C3TF /> }
         ],
         errorElement: <NotFound />,
     },

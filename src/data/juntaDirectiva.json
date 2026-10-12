@@ -133,50 +133,5 @@
     "foto": "/directiva/JD2026_Apoyo2.png",
     "linkedin": "https://linkedin.com",
     "github": "https://github.com"
-  },
-  {
-    "id": 16,
-    "nombre": "Apoyo Tres",
-    "cargo": "Miembro de Apoyo de Investigación",
-    "area": "Miembros de Apoyo",
-    "foto": "/directiva/JD2026_Apoyo.png",
-    "linkedin": "https://linkedin.com",
-    "github": "https://github.com"
-  },
-  {
-    "id": 17,
-    "nombre": "Yasert De La Cruz",
-    "cargo": "Miembro de Apoyo de Marketing",
-    "area": "Miembros de Apoyo",
-    "foto": "/directiva/JD2026_Apoyo.png",
-    "linkedin": "https://linkedin.com",
-    "github": "https://github.com"
-  },
-  {
-    "id": 18,
-    "nombre": "Apoyo Cinco",
-    "cargo": "Miembro de Apoyo",
-    "area": "Miembros de Apoyo",
-    "foto": "/directiva/JD2026_Apoyo.png",
-    "linkedin": "https://linkedin.com",
-    "github": "https://github.com"
-  },
-  {
-    "id": 19,
-    "nombre": "Apoyo Cinco",
-    "cargo": "Miembro de Apoyo",
-    "area": "Miembros de Apoyo",
-    "foto": "/directiva/JD2026_Apoyo.png",
-    "linkedin": "https://linkedin.com",
-    "github": "https://github.com"
-  },
-  {
-    "id": 20,
-    "nombre": "Apoyo Cinco",
-    "cargo": "Miembro de Apoyo",
-    "area": "Miembros de Apoyo",
-    "foto": "/directiva/JD2026_Apoyo.png",
-    "linkedin": "https://linkedin.com",
-    "github": "https://github.com"
   }
 ]

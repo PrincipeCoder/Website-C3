@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import FadeInSection from "../animations/FadeInSection";
-import { IconMapPin, IconCalendarEvent, IconMicrophone2, IconTicket, IconTerminal2, IconChevronRight, IconMessageCode, IconShield, IconCloudLock, IconSearch, IconStarFilled, IconCode, IconLock } from "@tabler/icons-react";
+import { IconMapPin, IconCalendarEvent, IconMicrophone2, IconTicket, IconTerminal2, IconChevronRight, IconMessageCode, IconShield, IconCloudLock, IconSearch, IconStarFilled, IconCode, IconLock, IconTent, IconBriefcase, IconExternalLink, IconMail } from "@tabler/icons-react";
 import sponsorsData from "../../data/sponsors.js";
 import c3confData from "../../data/c3conf.json";
-import logoC3Conf from "../../assets/images/LogoC3Conf-Photoroom.webp";
+
+const LUMA_URL = "https://luma.com/s7ljmrjx";
+const SESSIONIZE_URL = "https://sessionize.com/c3-conf-fiee-uni-2026/";
+const VILLAGE_MAILTO = `mailto:ccc@uni.edu.pe?subject=${encodeURIComponent("[C3Conf 2026] Propuesta de Village - Quiero ser village en el C3Conf")}&body=${encodeURIComponent("¡Hola equipo organizador del C3Conf 2026! 🚀🛡️\n\nQuiero ser village en el C3Conf y proponer un espacio interactivo, hacktivista y de aprendizaje para la comunidad tecnológica.\n\nDetalles de nuestra propuesta:\n• Nombre de la comunidad / iniciativa: \n• Temática principal del Village (Hardware, Lockpicking, Red Team, Crypto, IA, Forense, etc.): \n• Dinámica o actividades planeadas (Talleres, retos prácticos, exhibición, demos en vivo): \n• Responsable y datos de contacto (Nombre, Teléfono / Telegram): \n\n¡Quedamos atentos a su confirmación para coordinar los detalles!")}`;
+const SPONSOR_MAILTO = `mailto:ccc@uni.edu.pe?subject=${encodeURIComponent("[C3Conf 2026] Oportunidad de Patrocinio - Quiero ser sponsor del C3Conf 2026 dame más información")}&body=${encodeURIComponent("¡Saludos cordiales al comité organizador del C3Conf 2026! 🤝⚡\n\nQuiero ser sponsor del C3Conf 2026 dame más información sobre los paquetes de patrocinio, alcances del evento y presencia de marca.\n\nInformación de nuestra organización:\n• Empresa / Organización: \n• Representante y cargo: \n• Correo corporativo y teléfono: \n• Categoría de interés (Platinum, Gold, Silver, Aliado Tecnológico): \n• Objetivos de la marca (Branding, reclutamiento de talento, demo de producto): \n\nEsperamos el dossier de patrocinio para agendar una breve reunión.")}`;
 
 const C3Conf = () => {
     const [liveCode, setLiveCode] = useState("0x0000");
@@ -77,19 +81,14 @@ const C3Conf = () => {
 
                 <div className="w-full px-4 md:px-12 flex flex-col items-center text-center relative z-10 pt-10">
 
-                    {/* Header Brand Mark (Logo) */}
-                    <div className="mb-10">
-                        <img src={logoC3Conf} alt="C3Conf Logo" className="h-32 md:h-48 lg:h-64 object-contain drop-shadow-[0_0_25px_rgba(139,195,74,0.3)] opacity-100" />
-                    </div>
-
                     {/* Status Badge */}
-                    <div className="mb-12 inline-flex items-center gap-3 px-5 py-2 rounded-full border border-[#8bc34a]/20 bg-black/40 backdrop-blur-md shadow-[0_0_20px_rgba(139,195,74,0.05)]">
+                    <div className="mb-8 inline-flex items-center gap-3 px-5 py-2 rounded-full border border-[#8bc34a]/20 bg-black/40 backdrop-blur-md shadow-[0_0_20px_rgba(139,195,74,0.05)]">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#8bc34a] animate-pulse shadow-[0_0_5px_rgba(139,195,74,0.8)]"></span>
                         <span className="text-[10px] font-mono tracking-widest text-[#8bc34a] opacity-80">REGISTRO ABIERTO // {hero.version}</span>
                     </div>
 
                     {/* Main Title & Subtitle Wrapper with Flanking Cyber Items */}
-                    <div className="relative flex items-center justify-center w-full max-w-[1600px] mb-20 px-2 md:px-10">
+                    <div className="relative flex items-center justify-center w-full max-w-[1600px] mb-16 px-2 md:px-10">
 
                         {/* Flanking Item Left */}
                         <div className="hidden md:flex flex-col gap-3 absolute left-0 top-1/2 -translate-y-1/2 text-left opacity-60 border-l border-[#8bc34a]/20 pl-4">
@@ -104,11 +103,15 @@ const C3Conf = () => {
                             <span className="text-gray-500 font-mono text-[9px] tracking-widest">MONITORING</span>
                         </div>
 
-                        <div className="flex flex-col items-center relative">
-                            {/* Main Title */}
-                            <h1 className="text-5xl md:text-7xl lg:text-[7.5rem] font-black text-white tracking-tighter leading-none mb-8 relative group">
-                                C3<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#8bc34a] to-blue-500">CONF</span>
-                                <span className="absolute -top-4 -right-8 text-lg font-mono text-white/30 tracking-normal hidden md:block opacity-60">v.{hero.year}</span>
+                        <div className="flex flex-col items-center relative w-full">
+                            {/* Main Title con Logo Oficial Grande */}
+                            <h1 className="relative group flex justify-center w-full mb-6">
+                                <span className="sr-only">C3Conf 2026 Perú - {hero.subtitle}</span>
+                                <img 
+                                    src="/C3Conf/Logo-Principal-C3Conf.png" 
+                                    alt="C3Conf 2026 Perú" 
+                                    className="w-full max-w-[650px] md:max-w-[900px] lg:max-w-[1150px] h-auto object-contain drop-shadow-[0_0_50px_rgba(139,195,74,0.4)] hover:drop-shadow-[0_0_75px_rgba(139,195,74,0.65)] hover:scale-[1.02] transition-all duration-500 mix-blend-screen" 
+                                />
                             </h1>
 
                             {/* Subtitle */}
@@ -143,15 +146,96 @@ const C3Conf = () => {
                         </div>
                     </div>
 
-                    {/* CTAs */}
-                    <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-                        <button className="px-10 py-4 bg-white text-black font-semibold rounded hover:bg-gray-200 transition-all flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(255,255,255,0.15)] group">
-                            <IconLock size={18} className="group-hover:text-[#8bc34a] transition-colors" />
-                            {hero.ctaPrimary}
-                        </button>
-                        <button className="px-10 py-4 bg-transparent border border-white/10 text-white font-semibold rounded hover:bg-white/5 transition-all flex items-center justify-center gap-2">
-                            {hero.ctaSecondary} <IconChevronRight size={18} />
-                        </button>
+                    {/* Botón Principal de Inscripción */}
+                    <div className="w-full flex justify-center mb-10">
+                        <a
+                            href={LUMA_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full max-w-xl px-10 py-5 bg-white text-black font-extrabold text-base sm:text-xl rounded-2xl hover:bg-[#8bc34a] hover:text-black hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_40px_rgba(255,255,255,0.2)] hover:shadow-[0_0_60px_rgba(139,195,74,0.6)] group border border-white"
+                        >
+                            <IconTicket size={28} className="group-hover:rotate-12 transition-transform text-black" />
+                            <span>Se parte del C3Conf Inscribete aqui</span>
+                        </a>
+                    </div>
+
+                    {/* Los 3 "CALL FOR" en Grande */}
+                    <div className="w-full max-w-5xl">
+                        <div className="flex items-center justify-center gap-2 mb-4">
+                            <span className="w-2 h-2 rounded-full bg-[#8bc34a] animate-pulse"></span>
+                            <span className="text-xs font-mono tracking-widest text-gray-400 uppercase">
+                                CONVOCATORIAS ABIERTAS // CALL FOR PARTICIPATION
+                            </span>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 w-full">
+                            {/* 1. CALL FOR SPEAKERS */}
+                            <a
+                                href={SESSIONIZE_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group p-6 md:p-8 bg-gradient-to-b from-[#111] to-[#080808] border border-gray-800 hover:border-[#8bc34a] rounded-2xl flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_0_35px_rgba(139,195,74,0.25)] hover:-translate-y-1.5 relative overflow-hidden"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-b from-[#8bc34a]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="p-4 bg-white/5 border border-white/10 rounded-2xl text-[#8bc34a] mb-4 group-hover:scale-110 group-hover:bg-[#8bc34a]/10 transition-all duration-300">
+                                    <IconMicrophone2 size={32} />
+                                </div>
+                                <span className="text-[11px] font-mono text-[#8bc34a] tracking-widest uppercase mb-1">CONFERENCIAS</span>
+                                <h3 className="text-xl md:text-2xl font-black text-white group-hover:text-[#8bc34a] transition-colors mb-2">
+                                    CALL FOR SPEAKERS
+                                </h3>
+                                <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-6">
+                                    Postula tu investigación o charla técnica a través de Sessionize.
+                                </p>
+                                <div className="mt-auto w-full py-3 px-4 rounded-xl bg-white/5 border border-white/10 group-hover:bg-[#8bc34a] group-hover:border-[#8bc34a] group-hover:text-black text-white text-xs font-mono font-bold transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
+                                    <span>POSTULAR EN SESSIONIZE</span>
+                                    <IconExternalLink size={16} />
+                                </div>
+                            </a>
+
+                            {/* 2. CALL FOR VILLAGES */}
+                            <a
+                                href={VILLAGE_MAILTO}
+                                className="group p-6 md:p-8 bg-gradient-to-b from-[#111] to-[#080808] border border-gray-800 hover:border-yellow-500 rounded-2xl flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_0_35px_rgba(234,179,8,0.25)] hover:-translate-y-1.5 relative overflow-hidden"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-b from-yellow-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="p-4 bg-white/5 border border-white/10 rounded-2xl text-yellow-400 mb-4 group-hover:scale-110 group-hover:bg-yellow-500/10 transition-all duration-300">
+                                    <IconTent size={32} />
+                                </div>
+                                <span className="text-[11px] font-mono text-yellow-400 tracking-widest uppercase mb-1">COMUNIDADES</span>
+                                <h3 className="text-xl md:text-2xl font-black text-white group-hover:text-yellow-400 transition-colors mb-2">
+                                    CALL FOR VILLAGES
+                                </h3>
+                                <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-6">
+                                    Monta tu espacio interactivo, retos prácticos y workshops comunitarios.
+                                </p>
+                                <div className="mt-auto w-full py-3 px-4 rounded-xl bg-white/5 border border-white/10 group-hover:bg-yellow-400 group-hover:border-yellow-400 group-hover:text-black text-white text-xs font-mono font-bold transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
+                                    <span>QUIERO SER VILLAGE</span>
+                                    <IconMail size={16} />
+                                </div>
+                            </a>
+
+                            {/* 3. CALL FOR SPONSORS */}
+                            <a
+                                href={SPONSOR_MAILTO}
+                                className="group p-6 md:p-8 bg-gradient-to-b from-[#111] to-[#080808] border border-gray-800 hover:border-blue-500 rounded-2xl flex flex-col items-center text-center transition-all duration-300 hover:shadow-[0_0_35px_rgba(59,130,246,0.25)] hover:-translate-y-1.5 relative overflow-hidden"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-b from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div className="p-4 bg-white/5 border border-white/10 rounded-2xl text-blue-400 mb-4 group-hover:scale-110 group-hover:bg-blue-500/10 transition-all duration-300">
+                                    <IconBriefcase size={32} />
+                                </div>
+                                <span className="text-[11px] font-mono text-blue-400 tracking-widest uppercase mb-1">PATROCINIOS</span>
+                                <h3 className="text-xl md:text-2xl font-black text-white group-hover:text-blue-400 transition-colors mb-2">
+                                    CALL FOR SPONSORS
+                                </h3>
+                                <p className="text-gray-400 text-xs md:text-sm leading-relaxed mb-6">
+                                    Impulsa el evento tecnológico del año y posiciona tu marca ante la industria.
+                                </p>
+                                <div className="mt-auto w-full py-3 px-4 rounded-xl bg-white/5 border border-white/10 group-hover:bg-blue-500 group-hover:border-blue-500 group-hover:text-black text-white text-xs font-mono font-bold transition-all duration-300 flex items-center justify-center gap-2 shadow-sm">
+                                    <span>QUIERO SER SPONSOR</span>
+                                    <IconMail size={16} />
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -299,15 +383,37 @@ const C3Conf = () => {
             <FadeInSection>
                 <div className="w-full relative z-10 px-6">
                     <div className="max-w-[1600px] mx-auto">
-                        <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-6">
+                        <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
                             <div>
                                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Intel & Speakers</h2>
                                 <p className="text-gray-400 font-light max-w-lg">Expertos de clase mundial compartiendo investigaciones inéditas, zero-days y metodologías tácticas.</p>
                             </div>
+                            <a
+                                href={SESSIONIZE_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-[#8bc34a]/10 border border-[#8bc34a] text-[#8bc34a] hover:bg-[#8bc34a] hover:text-black font-mono font-bold text-xs rounded transition-all shadow-[0_0_15px_rgba(139,195,74,0.2)]"
+                            >
+                                <IconMicrophone2 size={16} /> [ POSTULAR COMO SPEAKER ]
+                            </a>
                         </div>
 
-                        <div className="flex justify-center py-20">
-                            <span className="text-[#8bc34a] font-mono text-xl animate-pulse">buscando ...</span>
+                        <div className="p-8 md:p-12 rounded-2xl bg-gradient-to-br from-[#0c0c0c] to-[#040404] border border-gray-800 text-center max-w-3xl mx-auto flex flex-col items-center">
+                            <span className="text-[#8bc34a] font-mono text-xs tracking-widest uppercase mb-3 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-[#8bc34a] animate-pulse"></span> CONVOCATORIA DE PONENTES ABIERTA // SESSIONIZE
+                            </span>
+                            <h3 className="text-2xl font-bold text-white mb-3">¿Deseas presentar tu ponencia en C3Conf 2026?</h3>
+                            <p className="text-gray-400 text-sm mb-6 max-w-xl leading-relaxed">
+                                Si estás investigando en ofensiva digital, defensa, IA para ciberseguridad, cloud o reversing, postula a través de nuestra plataforma oficial de Call for Speakers en Sessionize.
+                            </p>
+                            <a
+                                href={SESSIONIZE_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="px-8 py-3.5 bg-white text-black font-semibold rounded hover:bg-[#8bc34a] hover:text-black transition-all flex items-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                            >
+                                <IconExternalLink size={18} /> ENVIAR PROPUESTA EN SESSIONIZE
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -373,10 +479,21 @@ const C3Conf = () => {
                             <span className="text-gray-500">&gt;</span> EL C3CONF 2026 LLEGA GRACIAS A NUESTROS SPONSORS OFICIALES
                         </p>
 
-                        <div className="flex flex-wrap justify-center gap-16 md:gap-28 lg:gap-32 items-center opacity-70 hover:opacity-100 transition-opacity duration-500 mt-8">
+                        <div className="flex flex-wrap justify-center gap-16 md:gap-28 lg:gap-32 items-center opacity-70 hover:opacity-100 transition-opacity duration-500 mt-8 mb-12">
                             <img src="/C3Conf/Sponsor-SecureSoft.png" alt="SecureSoft" className="h-16 md:h-24 lg:h-32 object-contain grayscale hover:grayscale-0 transition-all duration-300" onError={(e) => e.target.style.display = 'none'} />
                             <img src="/C3Conf/Sponsor-Fortinet.png" alt="Fortinet" className="h-12 md:h-20 lg:h-28 object-contain grayscale hover:grayscale-0 transition-all duration-300" onError={(e) => e.target.style.display = 'none'} />
                             <img src="/C3Conf/Sponsor-Radware.png" alt="Radware" className="h-12 md:h-20 lg:h-28 object-contain grayscale hover:grayscale-0 transition-all duration-300" onError={(e) => e.target.style.display = 'none'} />
+                        </div>
+
+                        {/* Call for Sponsors CTA */}
+                        <div className="pt-8 border-t border-white/5 max-w-2xl mx-auto flex flex-col items-center">
+                            <p className="text-gray-400 text-sm mb-4 font-mono">¿Quieres posicionar tu organización ante los futuros líderes en ciberseguridad?</p>
+                            <a
+                                href={SPONSOR_MAILTO}
+                                className="px-8 py-3.5 bg-[#111] border border-blue-500/50 text-blue-400 hover:bg-blue-500 hover:text-black font-mono font-bold text-sm transition-all rounded shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] flex items-center gap-2"
+                            >
+                                <IconBriefcase size={18} /> [ SÉ SPONSOR // QUIERO SER SPONSOR DEL C3CONF ]
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -384,38 +501,123 @@ const C3Conf = () => {
 
             <div className="h-24 w-full"></div>
 
-            {/* 8. CONTACTO / CTA FINAL */}
+            {/* 8. HUB DE ACCESOS Y CONVOCATORIAS */}
             <FadeInSection>
                 <div className="w-full max-w-6xl px-6 py-20 mx-auto relative z-10 mb-20">
-                    <div className="bg-gradient-to-br from-[#0a0a0a] to-[#020202] border border-white/10 p-12 md:p-20 rounded-3xl text-center relative overflow-hidden shadow-2xl">
+                    <div className="bg-gradient-to-br from-[#0a0a0a] to-[#020202] border border-white/10 p-8 md:p-16 rounded-3xl text-center relative overflow-hidden shadow-2xl">
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,195,74,0.1)_0%,transparent_70%)] pointer-events-none"></div>
 
-                        <IconMessageCode size={48} className="text-white/20 mx-auto mb-6" />
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#8bc34a]/30 bg-black/50 text-[#8bc34a] font-mono text-xs tracking-widest mb-6">
+                            <span className="w-2 h-2 rounded-full bg-[#8bc34a] animate-pulse"></span> CONVOCATORIAS ABIERTAS // 2026
+                        </div>
 
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                            Contacto
+                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+                            Participa en el C3Conf 2026
                         </h2>
                         
-                        <div className="flex justify-center mb-6">
-                            <span className="text-[#8bc34a] font-mono text-xl animate-pulse">buscando ...</span>
-                        </div>
-
-                        <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto font-light">
-                            ¿Quieres comunicarte con nosotros para la C3Conf? Envíanos la flag oculta y establece una conexión segura.
+                        <p className="text-gray-400 text-base md:text-lg mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                            Forma parte del evento de ciberseguridad más trascendente del año. Elige tu rol en el ecosistema y asegura tu participación:
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-xl mx-auto">
+                        {/* Bento Grid con los 4 Accesos */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left mb-10">
+                            
+                            {/* Card 1: Asistente / Tickets Luma */}
                             <a
-                                href="mailto:ccc.c3conf@uni.edu.pe?subject=Flag%20C3Conf&body=CCC%7B1W4NTBE1NC3CONF%7D"
-                                className="px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-[#8bc34a] hover:text-black transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(139,195,74,0.3)]"
+                                href={LUMA_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group p-6 rounded-2xl bg-[#111]/80 border border-gray-800 hover:border-[#8bc34a] transition-all duration-300 hover:shadow-[0_0_25px_rgba(139,195,74,0.15)] flex flex-col justify-between"
                             >
-                                <IconLock size={18} /> ENVIAR TRANSMISIÓN SECRETA
+                                <div>
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="p-3 bg-white/5 rounded-xl text-[#8bc34a] group-hover:scale-110 transition-transform">
+                                            <IconTicket size={24} />
+                                        </div>
+                                        <span className="text-xs font-mono text-green-400 bg-green-500/10 px-2.5 py-1 rounded">LUMA TICKET</span>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[#8bc34a] transition-colors">Inscripción General</h3>
+                                    <p className="text-gray-400 text-xs leading-relaxed">Reserva tu entrada oficial para asistir al C3Conf en INICTEL-UNI.</p>
+                                </div>
+                                <div className="mt-5 flex items-center gap-2 text-xs font-mono text-[#8bc34a] font-bold">
+                                    REGISTRARSE EN LUMA <IconExternalLink size={14} />
+                                </div>
                             </a>
+
+                            {/* Card 2: Call for Speakers Sessionize */}
+                            <a
+                                href={SESSIONIZE_URL}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group p-6 rounded-2xl bg-[#111]/80 border border-gray-800 hover:border-[#8bc34a] transition-all duration-300 hover:shadow-[0_0_25px_rgba(139,195,74,0.15)] flex flex-col justify-between"
+                            >
+                                <div>
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="p-3 bg-white/5 rounded-xl text-[#8bc34a] group-hover:scale-110 transition-transform">
+                                            <IconMicrophone2 size={24} />
+                                        </div>
+                                        <span className="text-xs font-mono text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded">SESSIONIZE</span>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[#8bc34a] transition-colors">Call for Speakers</h3>
+                                    <p className="text-gray-400 text-xs leading-relaxed">Postula tu ponencia, investigación o demostración táctica de ciberseguridad.</p>
+                                </div>
+                                <div className="mt-5 flex items-center gap-2 text-xs font-mono text-[#8bc34a] font-bold">
+                                    POSTULAR EN SESSIONIZE <IconExternalLink size={14} />
+                                </div>
+                            </a>
+
+                            {/* Card 3: Call for Villages Mailto */}
+                            <a
+                                href={VILLAGE_MAILTO}
+                                className="group p-6 rounded-2xl bg-[#111]/80 border border-gray-800 hover:border-yellow-500/80 transition-all duration-300 hover:shadow-[0_0_25px_rgba(234,179,8,0.15)] flex flex-col justify-between"
+                            >
+                                <div>
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="p-3 bg-white/5 rounded-xl text-yellow-400 group-hover:scale-110 transition-transform">
+                                            <IconTent size={24} />
+                                        </div>
+                                        <span className="text-xs font-mono text-yellow-400 bg-yellow-500/10 px-2.5 py-1 rounded">COMUNIDAD</span>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-yellow-400 transition-colors">Call for Villages</h3>
+                                    <p className="text-gray-400 text-xs leading-relaxed">¿Representas a una comunidad o laboratorio? Monta un Village con retos y actividades.</p>
+                                </div>
+                                <div className="mt-5 flex items-center gap-2 text-xs font-mono text-yellow-400 font-bold">
+                                    QUIERO SER VILLAGE (MAILTO) <IconMail size={14} />
+                                </div>
+                            </a>
+
+                            {/* Card 4: Call for Sponsors Mailto */}
+                            <a
+                                href={SPONSOR_MAILTO}
+                                className="group p-6 rounded-2xl bg-[#111]/80 border border-gray-800 hover:border-blue-500 transition-all duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.15)] flex flex-col justify-between"
+                            >
+                                <div>
+                                    <div className="flex items-center justify-between mb-4">
+                                        <div className="p-3 bg-white/5 rounded-xl text-blue-400 group-hover:scale-110 transition-transform">
+                                            <IconBriefcase size={24} />
+                                        </div>
+                                        <span className="text-xs font-mono text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded">EMPRESAS</span>
+                                    </div>
+                                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-400 transition-colors">Call for Sponsors</h3>
+                                    <p className="text-gray-400 text-xs leading-relaxed">Auspicia el C3Conf 2026. Conecta con talento calificado y lidera la industria.</p>
+                                </div>
+                                <div className="mt-5 flex items-center gap-2 text-xs font-mono text-blue-400 font-bold">
+                                    SOLICITAR DOSSIER DE SPONSOR <IconMail size={14} />
+                                </div>
+                            </a>
+
                         </div>
 
-                        <p className="mt-6 text-xs text-gray-600 font-mono">
-                            CONNECTION SECURE // ENCRYPTED_CHANNEL_ACTIVE
-                        </p>
+                        {/* Canal de correo general */}
+                        <div className="pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs font-mono text-gray-500 gap-4">
+                            <div>
+                                CONTACTO OFICIAL: <a href="mailto:ccc@uni.edu.pe" className="text-gray-300 hover:text-[#8bc34a] underline">ccc@uni.edu.pe</a>
+                            </div>
+                            <div>
+                                ENCRYPTED_CHANNEL // ACTIVE
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </FadeInSection>

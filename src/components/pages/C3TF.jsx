@@ -28,11 +28,11 @@ const C3TF = () => {
     }, []);
 
     return (
-        <div className="min-h-screen bg-[#030a05] flex flex-col items-center pt-24 pb-20 px-6 lg:px-20 gap-20 font-mono relative overflow-hidden">
+        <div className="min-h-screen bg-black flex flex-col items-center pt-24 pb-20 px-6 lg:px-20 gap-20 font-mono relative overflow-hidden">
             
-            {/* Overlays para garantizar lectura de texto */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#030a05]/40 via-[#030a05]/80 to-[#030a05] z-0 pointer-events-none"></div>
-            <div className="absolute inset-0 z-0 pointer-events-none opacity-[0.03] bg-[linear-gradient(rgba(139,195,74,1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,195,74,1)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+            {/* Grid & Scanlines background idéntico a las demás páginas */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(139,195,74,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(139,195,74,0.02)_1px,transparent_1px)] bg-[size:3rem_3rem] pointer-events-none z-0"></div>
+            <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.25)_50%)] bg-[length:100%_4px] opacity-20 z-0"></div>
             
 
             
@@ -59,17 +59,17 @@ const C3TF = () => {
 
                     {/* Quick Info Badges */}
                     <div className="flex flex-col md:flex-row gap-6 mt-10 w-full justify-center">
-                        <div className="flex items-center gap-4 bg-[#08110a]/80 backdrop-blur-md border border-green-900/50 hover:border-[#8bc34a] transition-colors p-5 rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.6)]">
+                        <div className="flex items-center gap-4 bg-[#111] backdrop-blur-md border border-gray-800 hover:border-[#8bc34a]/50 transition-colors p-5 rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.6)]">
                             <IconCalendarEvent className="text-[#8bc34a]" size={36} />
                             <div className="text-left">
-                                <p className="text-xs text-green-600 uppercase font-bold tracking-wider mb-1">Fecha de Combate</p>
+                                <p className="text-xs text-gray-400 uppercase font-bold tracking-wider mb-1">Fecha de Combate</p>
                                 <p className="text-white font-bold">21 y 22 Nov, 2026</p>
                             </div>
                         </div>
-                        <div className="flex items-center gap-4 bg-[#08110a]/80 backdrop-blur-md border border-green-900/50 hover:border-[#8bc34a] transition-colors p-5 rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.6)]">
+                        <div className="flex items-center gap-4 bg-[#111] backdrop-blur-md border border-gray-800 hover:border-[#8bc34a]/50 transition-colors p-5 rounded-2xl shadow-[0_0_20px_rgba(0,0,0,0.6)]">
                             <IconUsers className="text-[#8bc34a]" size={36} />
                             <div className="text-left">
-                                <p className="text-xs text-green-600 uppercase font-bold tracking-wider mb-1">Formación</p>
+                                <p className="text-xs text-gray-400 uppercase font-bold tracking-wider mb-1">Formación</p>
                                 <p className="text-white font-bold">Equipos de 3 integrantes</p>
                             </div>
                         </div>
@@ -91,7 +91,7 @@ const C3TF = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
                         {categories.map((cat, idx) => (
-                            <div key={idx} className="bg-[#060e08] border border-green-900/40 hover:border-[#8bc34a]/50 p-6 rounded-2xl group transition-all duration-300 hover:shadow-[0_0_20px_rgba(139,195,74,0.15)] hover:-translate-y-1">
+                            <div key={idx} className="bg-[#111] border border-gray-800 hover:border-[#8bc34a]/50 p-6 rounded-2xl group transition-all duration-300 hover:shadow-[0_0_20px_rgba(139,195,74,0.15)] hover:-translate-y-1">
                                 <div className="text-[#8bc34a] mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
                                     <IconTerminal2 size={32} />
                                 </div>
@@ -105,7 +105,7 @@ const C3TF = () => {
 
             {/* Premios */}
             <FadeInSection>
-                <div className="w-full max-w-7xl bg-gradient-to-br from-[#08110a] to-[#050b07] border border-green-900/40 rounded-3xl p-8 md:p-12 relative z-10 shadow-[0_0_40px_rgba(139,195,74,0.05)] overflow-hidden">
+                <div className="w-full max-w-7xl bg-[#111] border border-gray-800 rounded-3xl p-8 md:p-12 relative z-10 shadow-[0_0_40px_rgba(0,0,0,0.6)] overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#8bc34a]/10 rounded-full blur-[80px] pointer-events-none"></div>
                     
                     <div className="flex flex-col md:flex-row items-center gap-10">
@@ -123,9 +123,9 @@ const C3TF = () => {
                                 Demuestra tu valía en el campo de batalla digital. Contamos con <strong className="text-white">muchos certificados internacionales</strong> como premios principales para los mejores equipos, además del reconocimiento en la comunidad hacker, acceso a oportunidades laborales únicas y botines exclusivos cortesía de nuestros aliados.
                             </p>
                             <div className="flex gap-4">
-                                <span className="px-4 py-2 bg-green-900/30 border border-green-800 text-green-400 text-sm rounded-lg font-bold">Certificaciones</span>
-                                <span className="px-4 py-2 bg-[#8bc34a]/20 border border-green-700 text-[#8bc34a] text-sm rounded-lg font-bold">Swag Exclusivo</span>
-                                <span className="px-4 py-2 bg-green-900/30 border border-green-800 text-green-400 text-sm rounded-lg font-bold">Reconocimiento</span>
+                                <span className="px-4 py-2 bg-black/60 border border-gray-800 text-gray-300 text-sm rounded-lg font-bold">Certificaciones</span>
+                                <span className="px-4 py-2 bg-[#8bc34a]/10 border border-[#8bc34a]/40 text-[#8bc34a] text-sm rounded-lg font-bold">Swag Exclusivo</span>
+                                <span className="px-4 py-2 bg-black/60 border border-gray-800 text-gray-300 text-sm rounded-lg font-bold">Reconocimiento</span>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@ const C3TF = () => {
                         </Text>
                     </div>
                     
-                    <div className="w-full bg-[#050b07]/80 backdrop-blur-sm border border-gray-800 rounded-3xl p-10 flex flex-wrap justify-center items-center gap-12 md:gap-20 relative overflow-hidden">
+                    <div className="w-full bg-[#111] backdrop-blur-sm border border-gray-800 rounded-3xl p-10 flex flex-wrap justify-center items-center gap-12 md:gap-20 relative overflow-hidden">
                         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,195,74,0.05)_0%,transparent_70%)] pointer-events-none"></div>
                         
                         {sponsors.map((sponsor, index) => (
